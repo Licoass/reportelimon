@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Trabajos - COCESNA Limón | Eco Ingeniería CR</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Bar de Control (Oculta en Impresión) -->
+    <div class="control-bar no-print">
+        <div class="control-container">
+            <span class="brand-text"><i class="fa-solid fa-leaf"></i> Eco Ingeniería CR</span>
+            <div class="actions">
+                <button onclick="window.print()" class="btn btn-print"><i class="fa-solid fa-print"></i> Guardar como PDF / Imprimir</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor Principal -->
+    <div class="report-wrapper">
+        
+        <!-- ENCABEZADO / PORTADA -->
+        <header class="report-header">
+            <div class="header-top">
+                <img src="logo-aire-acondicionado-eco-ingenieria-energia-solar.png" alt="Logo Eco Ingeniería" class="logo">
+                <div class="header-meta">
+                    <span class="badge badge-primary">Reporte Técnico de Trabajos</span>
+                    <span class="badge badge-success">Proyecto Completado</span>
+                </div>
+            </div>
+            
+            <div class="header-title-container">
+                <h1>Informe de Trabajos de Climatización</h1>
+                <h2>Sistemas de Aire Acondicionado - Contenedor COCESNA</h2>
+                <p class="subtitle">Aeropuerto Internacional de Limón, Costa Rica</p>
+            </div>
+
+            <div class="header-grid">
+                <div class="meta-item">
+                    <div class="meta-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="meta-content">
+                        <label>Cliente</label>
+                        <strong>COCESNA (Limón)</strong>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <div class="meta-content">
+                        <label>Ubicación</label>
+                        <strong>Aeropuerto Internacional de Limón</strong>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                    <div class="meta-content">
+                        <label>Fecha de Ejecución</label>
+                        <strong>08 al 10 de Junio, 2026</strong>
+                    </div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <div class="meta-content">
+                        <label>Técnicos Responsables</label>
+                        <strong>Luis Canales, Joel Canales</strong>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- NAVEGACIÓN INTERACTIVA (Oculta en Impresión) -->
+        <nav class="report-nav no-print">
+            <button class="nav-tab active" onclick="switchTab('resumen')"><i class="fa-solid fa-file-invoice"></i> Resumen</button>
+            <button class="nav-tab" onclick="switchTab('bitacora')"><i class="fa-solid fa-list-check"></i> Trabajos Realizados</button>
+            <button class="nav-tab" onclick="switchTab('equipos')"><i class="fa-solid fa-circle-info"></i> Equipos e Información</button>
+            <button class="nav-tab" onclick="switchTab('pruebas')"><i class="fa-solid fa-gauge"></i> Pruebas de Calidad</button>
+            <button class="nav-tab" onclick="switchTab('galeria')"><i class="fa-solid fa-images"></i> Galería de Fotos</button>
+            <button class="nav-tab" onclick="switchTab('acta')"><i class="fa-solid fa-signature"></i> Acta y Firmas</button>
+        </nav>
+
+        <!-- CONTENIDO DEL REPORTE -->
+        <main class="report-content">
+
+            <!-- SECCIÓN: RESUMEN EJECUTIVO -->
+            <section id="resumen" class="content-section active">
+                <div class="section-card">
+                    <h3 class="section-title"><i class="fa-solid fa-circle-info text-primary"></i> Resumen Ejecutivo</h3>
+                    <p class="intro-text">
+                        Este informe técnico documenta el proceso de desinstalación de los sistemas anteriores, la preparación estructural, y el suministro, instalación y puesta en marcha de los nuevos sistemas de aire acondicionado tipo Split Inverter de 24,000 BTU en el contenedor de telecomunicaciones de <strong>COCESNA</strong>, ubicado en el <strong>Aeropuerto Internacional de Limón</strong>.
+                    </p>
+                    <p class="intro-text">
+                        El proyecto se enfocó en garantizar la continuidad operativa del equipamiento crítico dentro del contenedor, mejorando las bases de soporte para proteger los condensadores contra la humedad de la zona, reforzando el aislamiento térmico para evitar la condensación y el goteo de agua, instalando acabados decorativos y ruteando las tuberías internamente para mantener la estética, y diseñando jaulas antivandalismo a la medida para resguardar la inversión.
+                    </p>
+
+                    <div class="highlights-grid">
+                        <div class="highlight-box">
+                            <div class="hl-icon"><i class="fa-solid fa-shield-halved text-success"></i></div>
+                            <h4>Seguridad Física</h4>
+                            <p>Instalación de jaulas protectoras con sistema de arrastre y doble candado Cisa para evitar robos y vandalismo.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="hl-icon"><i class="fa-solid fa-droplet-slash text-blue"></i></div>
+                            <h4>Prevención de Humedad</h4>
+                            <p>Construcción de bases elevadas de acero para los condensadores y forrado de tuberías de mayor calibre para evitar condensaciones.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="hl-icon"><i class="fa-solid fa-wand-magic-sparkles text-primary"></i></div>
+                            <h4>Estética y Orden</h4>
+                            <p>Ruteo de tuberías por el interior del contenedor protegido con canaletas plásticas decorativas.</p>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="hl-icon"><i class="fa-solid fa-circle-check text-success"></i></div>
+                            <h4>Alta Eficiencia</h4>
+                            <p>Unidades E-Cold con tecnología Inverter de 24,000 BTU que aseguran bajo consumo y temperatura estable.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: TRABAJOS REALIZADOS (BITÁCORA) -->
+            <section id="bitacora" class="content-section">
+                <div class="section-card">
+                    <h3 class="section-title"><i class="fa-solid fa-list-check text-primary"></i> Trabajos Detallados Realizados</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-badge"><i class="fa-solid fa-trash-can"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>1. Retiro de Condensadores Antiguos</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Se realizó el desmontaje técnico y la remoción segura de los condensadores inoperantes de las unidades anteriores, desconectando y sellando las líneas de refrigeración y eléctricas previas.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-badge"><i class="fa-solid fa-hammer"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>2. Construcción de Base de Soporte Elevada</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Para evitar la humedad del suelo y prevenir la corrosión por el ambiente costero, se diseñó, construyó e instaló una base estructural elevada de perfiles de acero para soportar los condensadores de forma rígida y nivelada.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-badge"><i class="fa-solid fa-wind"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>3. Instalación de Condensadores Nuevos y Tuberías</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Se instalaron físicamente las unidades condensadoras nuevas marca E-Cold en sus soportes. Se tiró la tubería de cobre nueva, realizando el ruteo directo por el interior del contenedor hacia las unidades evaporadoras.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-badge"><i class="fa-solid fa-border-all"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>4. Aislamiento Térmico Reforzado</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Se realizó un forrado de tuberías (aislamiento térmico) de mayor grosor y densidad. Esto evita de manera absoluta la condensación de agua en las paredes de cobre y previene el goteo de agua dentro del contenedor crítico de telecomunicaciones.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-badge"><i class="fa-solid fa-rectangle-list"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>5. Canalización Decorativa Interior</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Se colocó canaleta plástica decorativa a lo largo del recorrido interior de las tuberías y cables. Esto asegura la protección física del aislamiento de cobre contra roces accidentales y mantiene la estética del espacio interno.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-badge"><i class="fa-solid fa-lock"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>6. Diseño e Instalación de Jaulas de Seguridad</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Se diseñaron y construyeron jaulas metálicas protectoras a la medida de los condensadores. Las jaulas cuentan con un mecanismo especial de arrastre/deslizamiento que permite abrir la jaula lateralmente para labores de mantenimiento y servicio técnico. Cada jaula cuenta con doble candado de seguridad marca <strong>Cisa</strong>.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-badge"><i class="fa-solid fa-circle-play"></i></div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>7. Pruebas de Calidad, Arranque y Puesta en Marcha</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Se efectuaron rigurosas pruebas de estanqueidad con nitrógeno a 256 PSI durante más de 1 hora, logrando estabilizar la presión a 257 PSI. Se realizó vacío del sistema por debajo de los 500 micrones (llegando a 187 micras en M.Split-02) y se procedió con la carga, liberación de refrigerante, conexión eléctrica definitiva y arranque exitoso de los equipos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: EQUIPOS E INFORMACIÓN -->
+            <section id="equipos" class="content-section">
+                <div class="equipos-grid">
+                    
+                    <!-- EQUIPO 1 -->
+                    <div class="section-card equipo-card">
+                        <div class="equipo-header">
+                            <span class="equipo-tag">M.Split-01</span>
+                            <h3>Equipo Aire Acondicionado 01</h3>
+                        </div>
+                        <div class="equipo-body">
+                            <table class="specs-table">
+                                <tr>
+                                    <th>Identificador de Activo</th>
+                                    <td>UE-75 DVOR LM / Barcode: 80001863</td>
+                                </tr>
+                                <tr>
+                                    <th>Marca / Capacidad</th>
+                                    <td>E-Cold Inverter / 24,000 BTU</td>
+                                </tr>
+                                <tr>
+                                    <th>Fecha de Instalación</th>
+                                    <td>10 de Junio, 2026</td>
+                                </tr>
+                                <tr>
+                                    <th>Técnicos</th>
+                                    <td>Luis Canales, Joel Canales</td>
+                                </tr>
+                                <tr>
+                                    <th>Tipo de Mantenimiento</th>
+                                    <td>Correctivo (Reemplazo Completo)</td>
+                                </tr>
+                                <tr>
+                                    <th>Estado de Entrega</th>
+                                    <td><span class="status-badge status-ok">Operativo y Funcionando</span></td>
+                                </tr>
+                            </table>
+
+                            <h4 class="sub-title">Trabajos Específicos</h4>
+                            <ul class="task-list">
+                                <li><i class="fa-solid fa-check text-success"></i> Remoción de condensador viejo y tubería dañada.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Montaje en base metálica elevada.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Sellado de previstas en paredes del contenedor.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Ruteo interior de tubería de cobre nueva con forro grueso.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Instalación de canaleta decorativa.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Prueba de estanqueidad a 256.5 PSI estabilizada a 257.0 PSI.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Vacío del sistema por debajo de 500 micras.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Instalación de jaula antivandalismo con doble candado Cisa.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- EQUIPO 2 -->
+                    <div class="section-card equipo-card">
+                        <div class="equipo-header header-secundario">
+                            <span class="equipo-tag tag-secundario">M.Split-02</span>
+                            <h3>Equipo Aire Acondicionado 02</h3>
+                        </div>
+                        <div class="equipo-body">
+                            <table class="specs-table">
+                                <tr>
+                                    <th>Identificador de Activo</th>
+                                    <td>UE-74 DVOR LM / Barcode: 80001864</td>
+                                </tr>
+                                <tr>
+                                    <th>Marca / Capacidad</th>
+                                    <td>E-Cold Inverter / 24,000 BTU</td>
+                                </tr>
+                                <tr>
+                                    <th>Fecha de Instalación</th>
+                                    <td>08 de Junio, 2026</td>
+                                </tr>
+                                <tr>
+                                    <th>Técnicos</th>
+                                    <td>Luis Canales, Joel Canales</td>
+                                </tr>
+                                <tr>
+                                    <th>Tipo de Mantenimiento</th>
+                                    <td>Correctivo (Reemplazo Completo)</td>
+                                </tr>
+                                <tr>
+                                    <th>Estado de Entrega</th>
+                                    <td><span class="status-badge status-ok">Operativo y Funcionando</span></td>
+                                </tr>
+                            </table>
+
+                            <h4 class="sub-title">Trabajos Específicos</h4>
+                            <ul class="task-list">
+                                <li><i class="fa-solid fa-check text-success"></i> Desmontaje y descarte de condensador viejo.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Construcción de base de acero y nivelación.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Conexión de tubería de refrigerante por interior de contenedor.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Aislamiento térmico reforzado (grosor especial).</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Sello hermético con masilla en penetraciones de pared.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Prueba de presión con nitrógeno seco (256 a 257 PSI).</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Vacío profundo alcanzando las 187 micras estables.</li>
+                                <li><i class="fa-solid fa-check text-success"></i> Colocación de jaula de arrastre y doble candado Cisa.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SECCIÓN: PRUEBAS DE CALIDAD -->
+            <section id="pruebas" class="content-section">
+                <div class="section-card">
+                    <h3 class="section-title"><i class="fa-solid fa-gauge text-primary"></i> Registro de Pruebas de Calidad y Arranque</h3>
+                    <p class="intro-text">
+                        Con el fin de certificar la correcta instalación y asegurar el máximo tiempo de vida útil de los compresores Inverter, se realizaron pruebas de calidad críticas según los estándares de refrigeración industrial de Eco Ingeniería CR:
+                    </p>
+
+                    <div class="pruebas-grid">
+                        
+                        <!-- Tarjeta Prueba 1 -->
+                        <div class="prueba-box">
+                            <div class="p-header">
+                                <span class="badge badge-success">Aprobada</span>
+                                <h4>Prueba de Estanqueidad (Fugas)</h4>
+                            </div>
+                            <p class="p-desc">Presurización con Nitrógeno Seco para verificar la integridad de las soldaduras y acoples.</p>
+                            <div class="p-data-grid">
+                                <div class="data-cell">
+                                    <span class="label">Presión Inicial</span>
+                                    <span class="value">256.5 PSI</span>
+                                </div>
+                                <div class="data-cell">
+                                    <span class="label">Presión Final</span>
+                                    <span class="value">257.0 PSI</span>
+                                </div>
+                                <div class="data-cell">
+                                    <span class="label">Duración</span>
+                                    <span class="value">> 60 mins</span>
+                                </div>
+                                <div class="data-cell">
+                                    <span class="label">Resultado</span>
+                                    <span class="value text-success">Sin Fugas</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta Prueba 2 -->
+                        <div class="prueba-box">
+                            <div class="p-header">
+                                <span class="badge badge-success">Aprobada</span>
+                                <h4>Prueba de Vacío Profundo</h4>
+                            </div>
+                            <p class="p-desc">Evacuación de humedad y gases no condensables en el circuito frigorífico.</p>
+                            <div class="p-data-grid">
+                                <div class="data-cell">
+                                    <span class="label">Límite Requerido</span>
+                                    <span class="value">&lt; 500 micrones</span>
+                                </div>
+                                <div class="data-cell">
+                                    <span class="label">Lectura M.Split-01</span>
+                                    <span class="value">&lt; 500 micras</span>
+                                </div>
+                                <div class="data-cell">
+                                    <span class="label">Lectura M.Split-02</span>
+                                    <span class="value">187 micras</span>
+                                </div>
+                                <div class="data-cell">
+                                    <span class="label">Deshidratación</span>
+                                    <span class="value text-success">Óptima</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta Prueba 3 -->
+                        <div class="prueba-box">
+                            <div class="p-header">
+                                <span class="badge badge-success">Aprobada</span>
+                                <h4>Parámetros Eléctricos y Operativos</h4>
+                            </div>
+                            <p class="p-desc">Monitoreo de carga eléctrica y presiones de trabajo en marcha de las unidades E-Cold.</p>
+                            <div class="p-data-grid">
+                                <div class="data-cell">
+                                    <span class="label">Voltaje de Línea</span>
+                                    <span class="value">207 V</span>
+                                </div>
+                                <div class="data-cell">
+                                    <span class="label">Corriente (Amperaje)</span>
+                                    <span class="value">2.16 A</span>
+                                </div>
+                                <div class="data-cell">
+                                    <span class="label">Presión de Trabajo</span>
+                                    <span class="value">135.5 PSI</span>
+                                </div>
+                                <div class="data-cell">
+                                    <span class="label">Temp. Evaporación</span>
+                                    <span class="value">4.6 °C</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: GALERÍA DE FOTOS (INTERACTIVA) -->
+            <section id="galeria" class="content-section">
+                <div class="section-card">
+                    <h3 class="section-title"><i class="fa-solid fa-images text-primary"></i> Galería de Evidencias Fotográficas</h3>
+                    <p class="intro-text no-print">
+                        Selecciona una categoría para filtrar las imágenes del reporte. Haz clic en cualquier foto para ampliarla.
+                    </p>
+
+                    <!-- Filtros de Galería -->
+                    <div class="gallery-filters no-print">
+                        <button class="filter-btn active" onclick="filterGallery('all')">Todas</button>
+                        <button class="filter-btn" onclick="filterGallery('prep')">Preparación y Bases</button>
+                        <button class="filter-btn" onclick="filterGallery('instalacion')">Instalación y Ruteo</button>
+                        <button class="filter-btn" onclick="filterGallery('acabados')">Aislamiento y Canaleta</button>
+                        <button class="filter-btn" onclick="filterGallery('seguridad')">Jaulas de Seguridad</button>
+                        <button class="filter-btn" onclick="filterGallery('pruebas-tecnicas')">Pruebas y Mediciones</button>
+                    </div>
+
+                    <!-- Cuadrícula de Galería -->
+                    <div class="gallery-grid">
+                        
+                        <!-- Grupo 1: Preparación y Bases -->
+                        <div class="gallery-item" data-category="prep">
+                            <div class="image-box">
+                                <img src="extracted_images/page_4_img_3.jpeg" alt="Condensador antiguo en el piso antes del trabajo" loading="lazy">
+                                <div class="img-badge badge-antes">Antes</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Estado Inicial del Condensador</h5>
+                                <p>Unidad antigua colocada en suelo directo, expuesta a corrosión y humedad.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="prep">
+                            <div class="image-box">
+                                <img src="extracted_images/page_2_img_2.jpeg" alt="Fabricación de base metálica en sitio" loading="lazy">
+                                <div class="img-badge badge-proceso">Proceso</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Construcción de Base de Soporte</h5>
+                                <p>Alineación y ensamble de vigas de acero estructural para elevar las unidades.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="prep">
+                            <div class="image-box">
+                                <img src="extracted_images/page_2_img_5.jpeg" alt="Detalle de la estructura de base metálica" loading="lazy">
+                                <div class="img-badge badge-proceso">Proceso</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Estructura de Base</h5>
+                                <p>Detalle de la base metálica elevada lista para recibir los condensadores.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="prep">
+                            <div class="image-box">
+                                <img src="extracted_images/page_6_img_9.jpeg" alt="Condensador nuevo colocado sobre base metálica" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Condensador Elevado</h5>
+                                <p>Equipo nuevo montado sobre la estructura de acero elevada, libre de humedad terrestre.</p>
+                            </div>
+                        </div>
+
+                        <!-- Grupo 2: Instalación y Ruteo -->
+                        <div class="gallery-item" data-category="instalacion">
+                            <div class="image-box">
+                                <img src="extracted_images/page_2_img_1.jpeg" alt="Verificación de nivel de la unidad" loading="lazy">
+                                <div class="img-badge badge-proceso">Proceso</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Verificación de Nivel</h5>
+                                <p>Nivelación precisa del condensador para garantizar correcto retorno de aceite al compresor.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="instalacion">
+                            <div class="image-box">
+                                <img src="extracted_images/page_4_img_1.jpeg" alt="Vista del interior del contenedor antes de la instalación" loading="lazy">
+                                <div class="img-badge badge-antes">Antes</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Humedad y Tubería Antigua</h5>
+                                <p>Salida antigua del contenedor sin canalizar y con aislamiento deteriorado.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="instalacion">
+                            <div class="image-box">
+                                <img src="extracted_images/page_2_img_3.jpeg" alt="Evaporador instalado dentro de contenedor" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Evaporador en Contenedor</h5>
+                                <p>Instalación final de la unidad interior de 24,000 BTU y ruteo estético.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="instalacion">
+                            <div class="image-box">
+                                <img src="extracted_images/page_4_img_2.jpeg" alt="Perforación de pared sellada con espuma" loading="lazy">
+                                <div class="img-badge badge-proceso">Proceso</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Paso de Pared Sellado</h5>
+                                <p>Sellado inicial con espuma de poliuretano en la prevista antigua tapada.</p>
+                            </div>
+                        </div>
+
+                        <!-- Grupo 3: Aislamiento y Canaleta -->
+                        <div class="gallery-item" data-category="acabados">
+                            <div class="image-box">
+                                <img src="extracted_images/page_5_img_6.jpeg" alt="Aplicación de masilla selladora en pasamuros" loading="lazy">
+                                <div class="img-badge badge-proceso">Proceso</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Sellado Final Pasamuros</h5>
+                                <p>Aplicación de masilla de alta densidad (putty) para impermeabilizar y sellar el pase de tuberías.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="acabados">
+                            <div class="image-box">
+                                <img src="extracted_images/page_3_img_4.jpeg" alt="Recorrido de tuberías con canaleta decorativa" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Canalización Decorativa</h5>
+                                <p>Ruteo estético de la tubería de refrigerante con forro reforzado dentro de canaleta plástica.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="acabados">
+                            <div class="image-box">
+                                <img src="extracted_images/page_6_img_4.jpeg" alt="Tuberías forradas y con canaleta dentro del contenedor" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Aislamiento y Canaleta</h5>
+                                <p>Recorrido completo en pared interior. Aislamiento grueso que erradica la condensación.</p>
+                            </div>
+                        </div>
+
+                        <!-- Grupo 4: Jaulas de Seguridad -->
+                        <div class="gallery-item" data-category="seguridad">
+                            <div class="image-box">
+                                <img src="extracted_images/page_6_img_7.jpeg" alt="Estructura de la jaula de seguridad sin instalar" loading="lazy">
+                                <div class="img-badge badge-proceso">Proceso</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Estructura de la Jaula</h5>
+                                <p>Marco metálico reforzado diseñado a medida para rodear y proteger el condensador.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="seguridad">
+                            <div class="image-box">
+                                <img src="extracted_images/page_3_img_1.jpeg" alt="Trabajo de herrería en la jaula de seguridad" loading="lazy">
+                                <div class="img-badge badge-proceso">Proceso</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Herrería y Ajustes en Sitio</h5>
+                                <p>Soldadura y anclaje de rieles de arrastre para el desplazamiento de la jaula.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="seguridad">
+                            <div class="image-box">
+                                <img src="extracted_images/page_5_img_7.jpeg" alt="Jaula metálica de seguridad terminada" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Jaula Protectora Final</h5>
+                                <p>Instalación completa de la jaula antivandalismo con acabado anticorrosivo gris.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="seguridad">
+                            <div class="image-box">
+                                <img src="extracted_images/page_6_img_3.jpeg" alt="Vista superior de la jaula con candados" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Mecanismo Superior</h5>
+                                <p>Techo de protección y pasadores del mecanismo de cierre con arrastre.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="seguridad">
+                            <div class="image-box">
+                                <img src="extracted_images/page_6_img_1.jpeg" alt="Detalle de candados Cisa instalados" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Candados Cisa de Seguridad</h5>
+                                <p>Doble candado de alta seguridad marca Cisa para bloqueo de los pasadores de arrastre.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="seguridad">
+                            <div class="image-box">
+                                <img src="extracted_images/page_6_img_2.jpeg" alt="Detalle del pasador de arrastre" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Pasador del Mecanismo</h5>
+                                <p>Estructura de la cerradura deslizable que facilita el retiro de la tapa de la jaula.</p>
+                            </div>
+                        </div>
+
+                        <!-- Grupo 5: Pruebas y Mediciones -->
+                        <div class="gallery-item" data-category="pruebas-tecnicas">
+                            <div class="image-box">
+                                <img src="extracted_images/page_4_img_5.jpeg" alt="Presurización con cilindro de nitrógeno" loading="lazy">
+                                <div class="img-badge badge-proceso">Proceso</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Inyección de Nitrógeno</h5>
+                                <p>Presurización del circuito para búsqueda de microporos y fugas.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="pruebas-tecnicas">
+                            <div class="image-box">
+                                <img src="extracted_images/page_5_img_2.jpeg" alt="Manómetro mostrando presión inicial" loading="lazy">
+                                <div class="img-badge badge-proceso">Proceso</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Lectura Inicial Nitrógeno</h5>
+                                <p>Registro inicial de la prueba de estanqueidad a 256.5 PSI.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="pruebas-tecnicas">
+                            <div class="image-box">
+                                <img src="extracted_images/page_5_img_5.jpeg" alt="Manómetro mostrando presión final estabilizada" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Estabilización Nitrógeno</h5>
+                                <p>Lectura final exitosa a 257.0 PSI estabilizados sin pérdida detectable.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="pruebas-tecnicas">
+                            <div class="image-box">
+                                <img src="extracted_images/page_3_img_2.jpeg" alt="Vacuómetro digital mostrando 187 micras" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Vacuómetro Digital</h5>
+                                <p>Certificación de deshidratación profunda del sistema a 187 micrones (ideal &lt;500).</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="pruebas-tecnicas">
+                            <div class="image-box">
+                                <img src="extracted_images/page_6_img_5.jpeg" alt="Amperímetro midiendo corriente de compresor" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Medición de Corriente (Amperaje)</h5>
+                                <p>Lectura de consumo eléctrico en marcha a 2.16 A (Compresor Inverter).</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="pruebas-tecnicas">
+                            <div class="image-box">
+                                <img src="extracted_images/page_6_img_6.jpeg" alt="Voltímetro midiendo tensión" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Medición de Tensión (Voltaje)</h5>
+                                <p>Monitoreo de la tensión de suministro eléctrico a 207 V, estable para el equipo.</p>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-category="pruebas-tecnicas">
+                            <div class="image-box">
+                                <img src="extracted_images/page_6_img_8.jpeg" alt="Manifold digital en operación" loading="lazy">
+                                <div class="img-badge badge-despues">Después</div>
+                            </div>
+                            <div class="image-info">
+                                <h5>Presión de Trabajo (Refrigerante)</h5>
+                                <p>Funcionamiento a 135.5 PSI con temperatura de evaporación a 4.6 °C.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN: ACTA DE ENTREGA Y FIRMAS -->
+            <section id="acta" class="content-section">
+                <div class="section-card">
+                    <h3 class="section-title"><i class="fa-solid fa-signature text-primary"></i> Acta de Cierre e Inspección</h3>
+                    <p class="intro-text">
+                        En la ciudad de Limón, a los 10 días del mes de junio del año 2026, se da por concluido el proyecto de mantenimiento correctivo e instalación de sistemas de aire acondicionado en el contenedor de telecomunicaciones de <strong>COCESNA</strong>. Los equipos descritos en este reporte quedan en estado <strong>TOTALMENTE OPERATIVO</strong>, cumpliendo con los estándares de calidad de instalación y seguridad física de **Eco Ingeniería CR**.
+                    </p>
+                    
+                    <div class="acceptance-box">
+                        <h4>Declaración de Conformidad</h4>
+                        <p>Al firmar este documento, el cliente certifica que:</p>
+                        <ul>
+                            <li><i class="fa-regular fa-square-check"></i> Las unidades antiguas de aire acondicionado fueron retiradas.</li>
+                            <li><i class="fa-regular fa-square-check"></i> Los soportes estructurales elevados de los condensadores están instalados a entera satisfacción.</li>
+                            <li><i class="fa-regular fa-square-check"></i> Se verificó el correcto funcionamiento de los nuevos equipos E-Cold Inverter (enfriamiento óptimo).</li>
+                            <li><i class="fa-regular fa-square-check"></i> Las tuberías se encuentran debidamente aisladas y canalizadas mediante canaletas decorativas.</li>
+                            <li><i class="fa-regular fa-square-check"></i> Las jaulas de protección antivandalismo y sus mecanismos de arrastre con candados Cisa operan correctamente.</li>
+                        </ul>
+                    </div>
+
+                    <div class="signature-grid">
+                        <div class="signature-column">
+                            <div class="signature-line"></div>
+                            <h5>Luis Canales / Joel Canales</h5>
+                            <p>Técnicos Instaladores</p>
+                            <span class="company-sub">Eco Ingeniería CR / Kprichos Leon LTDA</span>
+                        </div>
+                        <div class="signature-column">
+                            <div class="signature-line"></div>
+                            <h5>Representante Autorizado</h5>
+                            <p>Supervisor de Infraestructura y Operaciones</p>
+                            <span class="company-sub">COCESNA - Aeropuerto Limón</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- PIE DE PAGINA -->
+        <footer class="report-footer">
+            <div class="footer-content">
+                <p><strong>Eco Ingeniería CR</strong> - Soluciones en Climatización y Energía Solar</p>
+                <p>Tel: 7032 0662 | Email: info@ecoingenieriacr.com | San Antonio de Belén, Heredia</p>
+                <p class="copyright">&copy; 2026 Eco Ingeniería CR. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- LIGHTBOX PARA VER IMÁGENES A PANTALLA COMPLETA (Oculto por defecto) -->
+    <div id="lightbox" class="lightbox no-print" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
